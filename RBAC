@@ -1,0 +1,6 @@
+Many roles based:
+    - Admin: All rights
+    - Moderateur: Able to delete problematic content, ban users, etc, but can't access raw db or raw servers
+    - "Community manager": manage a small community (can be a teacher managing students for example)
+    - Basic user: upload content, manage his own content (modify description of his own replays, delete own posts, comment replays, create playlists, etc...)
+    - Anonymous: only watch replays. Cannot comment. Can fetch public api datas like comments, number of view. Can't edit anything

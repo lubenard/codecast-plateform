@@ -1,0 +1,14 @@
+<script>
+    import Menus from './Menus.svelte';
+</script>
+
+<style>
+
+</style>
+
+<Menus/>
+
+<div id="content">
+    This app is completely open source, and on github.
+    It has been developped working with Svelte and directus.
+</div>

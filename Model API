@@ -1,0 +1,16 @@
+API PUBLIQUE:
+    - Récuperer données par rapport a un replay (Nombre de vue, commentaires, etc...)
+    - Récuperer playlists publiques
+    - Télécharger playlists ou records publiques
+    - Récuperer le fil d'actualité générique
+    - Récupérer la liste des replays d'une recherche
+    
+API SEMI-PRIVEE (avec token d'authentifaction privé):
+    - Récuperer son fil d'actualité
+    - Poster des commentaires sous un replay
+    - Gérer ses replays (supprimer, rendre publique, privé, etc)
+    - Gérer ses playlists (Supprimer, créer, les mettre en publique / privée, ajouter / supprimer des autres personnes dans la playlist)
+
+API PRIVEE:
+    - Récuperer modèle db
+    - Récuperer données utilisateurs (login, email, password hachés, etc)

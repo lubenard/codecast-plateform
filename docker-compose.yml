@@ -1,0 +1,26 @@
+version: '3.8'
+
+networks:
+    plateform-network:
+
+volumes:
+  codecast-plateform-volume:
+
+services:
+  codecast-plateform-db:
+    build: ./db
+    container_name: codecast-plateform-db
+    volumes:
+       - codecast-plateform-volume:/var/lib/mysql
+    networks:
+      - plateform-network
+  codecast-plateform-backend:
+    build: ./backend
+    container_name: codecast-plateform-backend
+    restart: on-failure
+    networks:
+      - plateform-network
+    depends_on:
+      - codecast-plateform-db
+    
+
