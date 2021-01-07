@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import Utils from '../utils.js'
+    import { getCookie } from '../utils.svelte'
     
     let navbar;
 
@@ -70,7 +70,6 @@ li a {
 }
 	
 header {
-    overflow: hidden;
     background-color: #161313;
     left:0;
     position: fixed;
@@ -168,6 +167,9 @@ header #search-container button {
 :global(#content) {
         left: 18%;
         top: 10%;
+        right: 2%;
+        bottom: 0;
+        overflow: auto;
         position: fixed;
 }
 </style>
@@ -185,7 +187,7 @@ header #search-container button {
             </form>
         </div>
         <div id="userAccount">
-            {#if Utils.getCookie("Auth")}
+            {#if getCookie("Auth")}
                 <div class="dp">
                     <button class="dropbtn waves-effect waves-light btn">My account</button>
                     <div class="dp-content">
@@ -204,7 +206,7 @@ header #search-container button {
     <ul>
       <li><a class="active" href="/discover">Découvrir</a></li>
       <li><a href="/trends">Tendances</a></li>
-      <li><a href="#playlists">Playlists</a></li>
+      <li><a href="/playlists">Playlists</a></li>
       <li><a href="/about">A propos</a></li>
     </ul>
 </div>

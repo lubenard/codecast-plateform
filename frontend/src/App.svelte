@@ -3,22 +3,26 @@
   
   // Include our Routes
   import Home from './pages/Home.svelte'
+  import Discover from './pages/Discover.svelte'
+  import Trends from './pages/Trends.svelte'
+  import Playlists from './pages/Playlists.svelte'
   import Login from './pages/LoginForm.svelte'
   import Register from './pages/Register.svelte'
   import MyAccount from './pages/MyAccount.svelte'
   import Record from './pages/Record.svelte'
-  import Settings from './pages/Settings.svelte'
   import About from './pages/About.svelte'
 
   let page
   let params
   // Set up the pages to watch for
   router('/', () => page = Home)
+  router('/discover', () => page = Discover)
+  router('/trends', () => page = Trends)
+  router('/playlists', () => page = Playlists)
   router('/login', () => page = Login)
   router('/register', () => page = Register)
   router('/myaccount', () => page = MyAccount)
   router('/record', () => page = Record)
-  router('/settings', () => page = Settings)
   router('/about', () => page = About)
   // Set up the router to start and actively watch for changes
   router.start()

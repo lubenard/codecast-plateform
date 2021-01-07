@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import Menus from './Menus.svelte';
-    import Utils from '../utils.js'
+    import { getCookie } from '../utils.svelte'
 
     let records = [];
 
@@ -36,7 +36,7 @@
             <p>Loading...</p>
         {/each}
     {/if}
-    {#if Utils.getCookie("Auth")}
+    {#if getCookie("Auth")}
         <div class="fixed-action-btn">
             <a class="btn-floating btn-large red">
                 <i class="large material-icons">
@@ -44,5 +44,5 @@
                 </i>
             </a>
         </div>
-    {/if}    
+    {/if}
 </div>
